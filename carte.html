@@ -1,0 +1,126 @@
+<html>
+<head>
+<title>Ma première carte web</title>
+ <script src="ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+      <script th:src="@{/angularJsFront/carte.js}"></script>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+   integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+   crossorigin=""/>
+   <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+   crossorigin=""></script>
+   <style>
+       body{
+           background:#74BBE4;
+       }
+   		#map{
+                    height: 735px;
+                    width: 900px;
+                    float:right;
+                    margin-right:268px;
+                    
+   		}
+                .form{
+                    background: white;
+                    height: 735px;
+                    width: 350px;
+                    border-radius: 5px;
+                }
+                content{
+                    background:black;
+                    height: 50px;
+                    color:white;
+                }
+                .search{
+                    text-align: center;
+                    background-size:cover;
+                    margin:auto;
+                    padding :10px;
+                    color:black;
+                    text-align: center;
+                }
+                h1{
+                    text-align: center;
+                    font-family: Lucida Handwriting;
+                }
+                select{
+                    width: 200px;
+                    height: 30px;
+                    border-radius: 5px;
+                   
+                }
+                input{
+                    width: 200px;
+                    height: 30px;
+                    border-radius: 5px;
+                   
+                }
+                button{
+                    background-image: linear-gradient(to right, #56CCF2 0%, #2F80ED  51%, #56CCF2  100%);
+                    border-radius: 15px;
+                    border:1px solid #16B84E;
+                    height: 30px;
+                    width: 150px;
+                    margin: 5px;
+                    color: #fff;
+                   
+                }
+                label{
+                    margin: 0px;
+                     width: 120px;
+                      display:block;
+                      float:left;
+                }
+                .legend{
+                   width:300px;
+                   height:300px;
+                   border:1px solid black;
+                   margin-left: 20px;
+                   border-radius:5px;
+                   background: rgba(0,0,0,0.5);
+                   float: left;
+                }
+                .legend1{
+                   width:265px;
+                   height: 735px;
+                   background: white;
+                   float:right;
+                  border-radius: 5px;
+                    margin-top: -735px;
+                } 
+              
+   </style>
+ 
+</head>
+<body  ng-app="carteManagement" ng-controller="carteController" ng-init="init()">
+   <div id="map"></div>
+ 
+ <div class="form">
+   <div  class="search">
+       <h1 style="">Recherche</h1>
+      <label>Type de signalement: </label>
+			<select>
+				<option value="">Choisir:</option>
+			</select>
+      <br>
+      <br>
+      <label>Status:</label>
+			<select>
+				<option>Choisir:</option>
+			</select>
+                        <br>
+      <br>
+			<button>Rechercher</button>
+                      
+                       
+   </div>
+     <br><br>
+    
+     </div>
+   </div>
+   <div class="legend1">
+       legend eee
+       
+   </div>
+</body>
+</html>
